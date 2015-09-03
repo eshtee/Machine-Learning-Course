@@ -28,6 +28,9 @@ centroids = zeros(K, n);
 
 
 
+for k = 1:K
+    point_indeces = find(idx==k);
+    centroids(k, :) = sum(X(point_indeces, :)) ./ length(point_indeces);
 
 
 
